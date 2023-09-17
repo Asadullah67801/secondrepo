@@ -1,0 +1,39 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.container{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("https://tse2.mm.bing.net/th?id=OIP.Yx4AlNzUME3xv3ph-S7g5QHaE8&pid=Api&P=0&h=220");
+
+background-position: center;
+background-size: cover;
+min-height:100vh;
+
+
+}
+ul li:after{
+    content:'';
+    width:0%;
+    height:2px;
+    display:block;
+    background-color: red;
+    
+    transition:0.8s;
+
+}
+ul li:hover:after{
+
+    width:100%;
+}
+li a{
+    margin:10px;
+    text-decoration: none;
+    color:cornflowerblue;
+    font-weight:bold;
+    font-size:18px;
+}
+ul{
+    list-style:none;
+    padding:2% 6%;
+    display:flex;
+}
