@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <title>Document</title>
+   
 </head>
 <body>
-    <div class="navigation">
-        <ul>
-            <li>Home            </li>
-            <li>About us</li>
-            <li>Products</li>
-    </div>
-    
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+    <p>hello world</p>
+    <button id="hide">click me</button>
+   
+    <script>
+       $(document).ready(function(){  
+    $("#hide").click(function(){  
+        $("p").hide();  
+    });  
+});
+    </script>  
 </body>
 </html>
