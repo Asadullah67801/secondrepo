@@ -14,8 +14,8 @@
 
     <!-- logo image-->
     <a href="">loopstudios</a>
-
-    <div class="navlinks">
+   
+    <div class="navlinks" id="nav">
         <i class="fa fa-times" onclick="hide()"></i>
         <ul>
             <li><a>About</a></li>
@@ -25,8 +25,9 @@
             <li><a>Support</a></li>
         </ul>
     </div>
-    <i class="fa fa-bars" onclick="show()"></i>
+    
 </nav>
+<i class="fa fa-bars" onclick="show()"></i>
 <div class="heading">
     <h1> Impressive experience that Deliver</h1>
 
@@ -175,13 +176,15 @@
                                 }
                        
                             }
-
-                            .fa-bars{
-                                display:none;
-                            }
-                            .fa-times{
-                                display:none;
-                            }
+li a:hover{
+    cursor:pointer;
+    border-bottom: 1px solid white;
+}
+.fa-bars{
+display:block;
+text-align:right;
+margin-right:10px;
+}
                            .rightcontent{
                             color:white;
                             font-size:14px;
@@ -307,9 +310,35 @@ list-style: none;
             list-style: none;
 
         }
+        @media(max-width:700px){
+            .navlinks {
+                transition:0.5s;
+                top:0;
+                z-index:1;
+
+               left:
+               -250px;
+            min-height:100vh;
+
+          position:fixed;
+                background-color: red;
+            }
+            .navlinks ul li{
+                display:block;
+               
+            }
+
+        }
+
+        .fa-bars{transform:translate(-50%,-50%);
+            position:absolute;
+            left:90%;
+            top:10%;
+        }
         ul li{
             coloR:white;
             margin:10px;
+            font-size:14px;
             text-decoration:none;
         }
         *{
@@ -328,6 +357,25 @@ list-style: none;
 
             background-image: url("https://github.com/ghanikhan1/loopstudios/blob/main/images/desktop/image-hero.jpg?raw=true");
         }
+        .fa-times{
+            text-align:right;
+            align-items: right;
+            color:white;
+            transition:0.3s;
+           
+        }
+        .fa-times:hover{
+            transform:rotate(90deg);
+        }
        </style>
+       <script>
+        var nav=document.getElementById("nav");
+        function show(){
+            nav.style.left="0px";
+        }
+        function hide(){
+            nav.style.left="-250px";
+        }
+        </script>
 </body>
 </html>
