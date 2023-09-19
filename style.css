@@ -2,6 +2,35 @@
     padding:0px;
     margin:0px;
 }
+.flexcontainer{
+    padding:50px 0;
+    display: flex;
+    margin:auto;
+    justify-content: space-between;
+ 
+
+}
+.image{
+    flex-basis: 40%;
+    margin-bottom: 10px;
+margin:auto;
+}
+.flexcontainer p{
+    margin-right: 40px;
+    font-size: 20px;
+}
+@media(max-width:700px){
+    .flexcontainer{
+        flex-direction: column;
+    }
+}
+.image img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 20px;
+    width:200px;
+    height:200px;
+}
 nav{
     display:flex;
     justify-content: space-between;
@@ -14,6 +43,9 @@ nav{
     left:50%;
     text-align: center;
 }
+.secondcontainer h1{
+    margin: 10px;;
+}
 .fa-search{
     background-color: red;
 
@@ -22,9 +54,29 @@ nav{
     text-align: center;
     position: relative;
 }
+@media(max-width:700px){
+    .containers{
+        flex-direction: column;
+    }
+    form{
+        display: none;
+
+    }
+    nav ul li{
+        display: none;
+    }
+}
+.containers{
+
+}
+.flexcontainer h1{
+    margin:10px;
+}
+
 .containers{
     padding:50px 0;
     display: flex;
+    
     justify-content: center;
 }
 h2{
